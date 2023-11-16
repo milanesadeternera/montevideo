@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css" type="text/css">
+	<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL,Object.assign"></script>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+	<!-- ol-ext -->
+	<link rel="stylesheet" href="./ol-ext-master/dist/ol-ext.css" />
+	<script type="text/javascript" src="./ol-ext-master/dist/ol-ext.js"></script>
+
+	<!-- css -->
+	<link rel="stylesheet" href="prueba.css" type="text/css">
+
+    <title>OpenLayers example</title>
+</head>
+<body>
+<!-- <div id="map" class="map"></div> -->
+	<div id="map" class="map"></div>
+<!-- Button trigger modal -->
+
+	<!-- Modal -->
+	<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="infoModalLabel">Acerca de</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<ul class="nav nav-tabs nav-fill mb-3" id="ex1" role="tablist">
+					<li class="nav-item" role="presentation">
+						<a class="nav-link active" id="ex2-tab-1" data-bs-toggle="tab" href="#ex2-tabs-1"  role="tab" aria-controls="ex2-tabs-1" aria-selected="true"	>
+							El Mapa
+						</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" id="ex2-tab-2" data-bs-toggle="tab" href="#ex2-tabs-2" role="tab" aria-controls="ex2-tabs-2" aria-selected="false" >
+							El Proyecto
+						</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" id="ex2-tab-3" data-bs-toggle="tab" href="#ex2-tabs-3" role="tab" aria-controls="ex2-tabs-3" aria-selected="false">
+							Sobre mí
+						</a>
+					</li>
+				  </ul>
+				  <div class="tab-content" id="ex2-content">
+					<div class="tab-pane fade show active" id="ex2-tabs-1" role="tabpanel" aia-labelledby="ex2-tab-1">
+					  Tab 1 content
+					</div>
+					<div class="tab-pane fade" id="ex2-tabs-2" role="tabpanel" aria-labelledby="ex2-tab-2">	
+						<p class="fw-bold" >Montevideo 1894 - 2023</p><p> nace de buscar alimentar la constante curiosidad de la histia de la ciudad de Montevideo.
+						En el proceso de alimentar esta ** es que me encuentro con la colección digital de la Biblioteca Nacional donde guarda una coleccion de mapas de nuestro país
+						</p>
+					</div>
+					<div class="tab-pane fade" id="ex2-tabs-3" role="tabpanel" aria-labelledby="ex2-tab-3">
+						<div class="row">
+							<div class="col-4">
+								<img src="lnkdn.jpeg" class="object-fit-cover border rounded float-start" alt="...">
+							</div>
+							<div class="col ms-0">
+								<p class="fs-3">Facundo Colombo</p>
+								<p>Nacido en Montevideo en 1994. Ingeniero Tecnológico en electrónica de profesión y curioso por pasión.
+								Siempre interesado por el origen e hitoria de la ciudad encontré en esta idea la oportunidad de unirlo con el desarrollo en el campo de programación.
+								</p>
+							</div>
+						</div>
+					</div>
+				  </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Navbar -->
+    <div class="navbar fixed-bottom border-top bg-dark" data-bs-theme="dark">
+		<div class="container-fluid">
+			<div class="navbar-brand ms-4">
+				<div class="text-center">
+					<span class="d-block">
+						<p class="fs-3 mb-0">Montevideo</p>
+					</span>
+					<span class="d-block">
+						<p class="fs-5">1893 - 2023</p>
+					</span>
+				</div>
+			</div>
+			<div class="w-25">
+				<input type="range" class="form-range" min="0.3" max="1" step="0.01" id="opacity-input">
+			</div>
+			<div>
+				<button type="button" class="btn btn-secondary btn-lg me-4" data-bs-toggle="modal" data-bs-target="#infoModal">Acerca de</button>
+				<i class="bi bi-info-circle"></i>
+
+			</div>
+		</div>
+    </div>
+
+</body>
+<script type="text/javascript" src="prueba.js"></script>
+</html>
