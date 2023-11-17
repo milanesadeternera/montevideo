@@ -1,4 +1,9 @@
+//Mostrar modal de bienvenida
+$(window).on('load', function(){ 
+	$("#welcomeModal").modal('show');
+});
 
+//Cargamos los mapas
     var I02490 = new ol.layer.Group({
         title:'I02490',
         layers: [
