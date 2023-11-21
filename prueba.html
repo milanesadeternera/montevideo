@@ -8,7 +8,7 @@
 	<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL,Object.assign"></script>
 
 	<!-- Bootstrap -->
-    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 	<!-- ol-ext -->
@@ -22,15 +22,14 @@
 </head>
 <body>
 <!-- <div id="map" class="map"></div> -->
-	<div id="map" class="map"></div>
 <!-- Button trigger modal -->
 
 <!-- Modal Bienvenida -->
 <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
+	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 		<div class="modal-body">
-			<h1 class="text-center fs-2" >Modal title</h1>
+			<h1 class="text-center fs-2 mb-0" >Modal title</h1>
 			<h1 class="text-center fs-4" >Modal title</h1>
 			<hr class="divider">
 
@@ -38,13 +37,13 @@
 			...
 			
 			<div class="d-grid gap-2 col-6 mx-auto">
-				<button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Cerrar</button>
+				<button type="button" class="btn btn-secondary " data-bs-dismiss="modal" onclick="DisplayNav()">Cerrar</button>
 			</div>
 		</div>
 		</div>
 	</div>
 </div>
-	
+
 <!-- Modal -->
 <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
@@ -106,6 +105,14 @@
 							</figure>
 							</a>
 						</div>
+						<div class="col-md-auto">
+							<a href="https://getbootstrap.com/">
+							<figure class="figure text-center">
+								<img src="/maps/img/bootstrap.svg" width="50" height="50"> </img>
+								<figcaption class="figure-caption text-center">Bootstrap</figcaption>
+							</figure>
+							</a>
+						</div>
 					</div>
 				</div>
 				<!-- Modal sobre mi -->
@@ -115,7 +122,9 @@
 							<img src="/maps/img/lnkdn.jpeg" class="object-fit-cover border rounded float-start me-4" alt="profile photo">
 							<p class="fs-3">Facundo Colombo</p>
 							<p>Nacido en Montevideo en 1994. Ingeniero Tecnológico en electrónica de profesión y curioso por pasión.
-							Siempre interesado por el origen e hitoria de la ciudad encontré en esta idea la oportunidad de unirlo con el desarrollo en el campo de programación.
+							Siempre interesado por el origen e historia de la ciudad encontré en esta idea la oportunidad de unirlo con el desarrollo 
+							de conociemineto en el campo de programación y diseño web.
+
 							</p>
 						</div>
 					</div>
@@ -147,30 +156,31 @@
 	</div>
 </div>
 
-	<!-- Navbar -->
-    <div class="navbar fixed-bottom border-top bg-dark" data-bs-theme="dark">
-		<div class="container-fluid">
-			<div class="navbar-brand ms-4">
-				<div class="text-center">
-					<span class="d-block">
-						<p class="fs-3 mb-0">Montevideo</p>
-					</span>
-					<span class="d-block">
-						<p class="fs-5">1893 - 2023</p>
-					</span>
-				</div>
-			</div>
-			<div class="w-25">
-				<input type="range" class="form-range" min="0.3" max="1" step="0.01" id="opacity-input">
-			</div>
-			<div>
-				<button type="button" class="btn btn-secondary btn-lg me-4" data-bs-toggle="modal" data-bs-target="#infoModal">Acerca de</button>
-				<i class="bi bi-info-circle"></i>
-
+<!-- Navbar -->
+<div class="navbar fixed-bottom border-top bg-dark" id="navbarControl" data-bs-theme="dark" style="display:none">
+	<div class="container-fluid">
+		<div class="navbar-brand ms-4">
+			<div class="text-center">
+				<span class="d-block">
+					<p class="fs-3 mb-0">Montevideo</p>
+				</span>
+				<span class="d-block">
+					<p class="fs-5">1893 - 2023</p>
+				</span>
 			</div>
 		</div>
-    </div>
+		<div class="w-25">
+			<input type="range" class="form-range" min="0" max="1" step="0.01" id="opacity-input">
+		</div>
+		<div>
+			<button type="button" class="btn btn-secondary btn-lg me-4" data-bs-toggle="modal" data-bs-target="#infoModal">Acerca de</button>
+			<i class="bi bi-info-circle"></i>
+
+		</div>
+	</div>
+</div>
 
 </body>
 <script type="text/javascript" src="prueba.js"></script>
 </html>
+
