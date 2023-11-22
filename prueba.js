@@ -5,8 +5,8 @@ $(window).on('load', function(){
 
 //Mostrar Navbar
 function DisplayNav(){
-	var nav = document.getElementById("navbarControl").innerHTML;
-    nav.style.display = "block";
+	var nav = document.getElementById("navbarControl");
+	nav.style.display = "block";
 }
 
 //Cargamos los mapas
