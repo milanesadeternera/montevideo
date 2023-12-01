@@ -1,0 +1,3 @@
+[submodule "ol-ext"]
+	path = ol-ext
+	url = https://github.com/Viglino/ol-ext.git
