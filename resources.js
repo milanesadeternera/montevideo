@@ -47,9 +47,9 @@ const imagelayers = new ol.layer.Group({
 	name: 'I02490_4.jpg',
 	source: new ol.source.GeoImage({
 	url: "./maplayers/I02490_4.jpg",
-		"imageCenter": [-6255015.731682494, -4150496.2572819022],
-		"imageScale": [0.5112021335259879,0.5112021335259879],
-		"imageRotate": 0.730573625493868,
+		"imageCenter": [-6255021.466263206,-4150492.319490679],
+		"imageScale": [0.5215510554842502,0.5215510554842502],
+		"imageRotate": 0.7430766939572445,
 		projection: 'EPSG:3857'
 		})
 	}),

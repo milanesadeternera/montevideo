@@ -22,7 +22,6 @@
 </head>
 <body>
 <div id="map" class="map"></div>
-<!-- Button trigger modal -->
 
 <!-- Modal Bienvenida -->
 <div class="modal fade" id="welcomeModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="welcomeModalLabel" aria-hidden="true">
@@ -32,7 +31,8 @@
 			<h1 class="text-center fs-2 mb-0" >Montevideo</h1>
 			<h1 class="text-center fs-4" >1893 - 2023</h1>
 			<hr class="divider">
-			<p class="text-center">subtitle que va aca con breve descripción sobre esto</p>
+			<img src="./img/welcomeImage.jpg" class="rounded img-fluid mb-3">
+			<p class="text-center">Una mapa que une una ciudad a través de 130 años</p>
 			<div class="d-grid gap-2 col-6 mx-auto">
 				<button type="button" class="btn btn-secondary " data-bs-dismiss="modal" onclick="DisplayNav()">Cerrar</button>
 			</div>
@@ -51,15 +51,8 @@
 		</div>
 		<div class="modal-body">
 			<ul class="nav nav-tabs nav-fill mb-3" id="ex1" role="tablist">
-				<!--
 				<li class="nav-item" role="presentation">
-					<a class="nav-link active" id="ex2-tab-1" data-bs-toggle="tab" href="#ex2-tabs-1"  role="tab" aria-controls="ex2-tabs-1" aria-selected="true"	>
-						El Mapa
-					</a>
-				</li>
-				-->
-				<li class="nav-item" role="presentation">
-					<a class="nav-link" id="ex2-tab-1" data-bs-toggle="tab" href="#ex2-tabs-1" role="tab" aria-controls="ex2-tabs-1" aria-selected="false" >
+					<a class="nav-link active" id="ex2-tab-1" data-bs-toggle="tab" href="#ex2-tabs-1" role="tab" aria-controls="ex2-tabs-1" aria-selected="false" >
 						El Proyecto
 					</a>
 				</li>
@@ -70,18 +63,13 @@
 				</li>
 			</ul>
 			<div class="tab-content" id="ex2-content">
-				<!-- Modal El mapa
-				<div class="tab-pane fade show active" id="ex2-tabs-1" role="tabpanel" aia-labelledby="ex2-tab-1">
-					Tab 1 content
-				</div>
-				-->
 				<!-- Modal El proyecto -->
 				<div class="tab-pane fade show active" id="ex2-tabs-1" role="tabpanel" aria-labelledby="ex2-tab-1">	
 					<p class="fw-bold" >Montevideo 1894 - 2023</p>
 					<p>
 					Motivado por el proyecto <a href="http://mappingrome.com/NFUR/" class="fw-medium">Forma urbis romae</a>, que presenta una recopilación de documentos cartográficos de distintas épocas para visualizar el desarrollo de la ciudad de Roma, 
 					surgió la idea de llevar a cabo un proyecto similar para la ciudad de Montevideo. Partiendo del mapa de Montevideo elaborado en 1894 durante la presidencia de Julio Herrera y Obes, 
-					un documento de alta precisión técnica conservado y digitalizado por la Biblioteca Nacional en su Colección Digital, inicié el proceso de vincular registros con una brecha temporal de 120 años. 
+					un documento de alta precisión técnica conservado y digitalizado por la Biblioteca Nacional en su Colección Digital, inicié el proceso de vincular registros con una brecha temporal de 130 años. 
 					</p>
 					<img src="./img/titulo.jpeg" class="rounded img-fluid mb-3">
 					<p>
