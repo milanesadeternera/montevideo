@@ -89,7 +89,6 @@ var imagelayers = [
 ];
 
 for(let layerIndex = 0; layerIndex < imagelayers.length ; layerIndex++){
-    setTimeout(1000);
     let layer = new ol.layer.GeoImage({
         name: imagelayers[layerIndex][0],
         source: new ol.source.GeoImage({
