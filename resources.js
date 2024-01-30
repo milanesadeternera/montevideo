@@ -1,12 +1,19 @@
 //Mostrar modal de bienvenida
 $(window).on('load', function(){ 
-	$("#welcomeModal").modal('show');
+    let botonModal = document.getElementById("botonModal");
+    botonModal.style.display = "";
+    let botonCarga =  document.getElementById("botonCarga");
+    botonCarga.style.display = "none";
 });
 
 //Mostrar Navbar
 function DisplayNav(){
-	var nav = document.getElementById("navbarControl");
-	nav.style.display = "block";
+    //Tengo un bug acá que arreglar, el modal tiene display block, hay que mejorar eso.
+    let wmodal =  document.getElementById("welcomeModal");
+    wmodal.style.display = "";
+    $("#welcomeModal").modal('hide');
+    var nav = document.getElementById("navbarControl");
+    nav.style.display = "block";
 }
 
 const basemap = new ol.layer.Tile({
