@@ -24,7 +24,7 @@
 <div id="map" class="map"></div>
 
 <!-- Modal Bienvenida -->
-<div class="modal fade" id="welcomeModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+<div class="modal fade show" id="welcomeModal" tabindex="-1" data-bs-backdrop="static" style="display: block;" aria-labelledby="welcomeModalLabel" aria-hidden="false">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 		<div class="modal-body">
@@ -34,7 +34,13 @@
 			<img src="./img/welcomeImage.jpg" class="rounded img-fluid mb-3">
 			<p class="text-center">Una mapa que une una ciudad a través de 130 años</p>
 			<div class="d-grid gap-2 col-6 mx-auto">
-				<button type="button" class="btn btn-secondary " data-bs-dismiss="modal" onclick="DisplayNav()">Cerrar</button>
+				<!--Spinner de carga-->
+				<button id="botonCarga" class="btn btn-secondary" type="button" disabled>
+					<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+					<span role="status">Cargando...</span>
+				</button>
+				<!-- Boton de cerrar-->
+				<button id="botonModal" type="button" class="btn btn-secondary" style="display: none;" data-bs-dismiss="modal" onclick="DisplayNav()">Cerrar</button>			
 			</div>
 		</div>
 		</div>
